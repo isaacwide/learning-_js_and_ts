@@ -1,7 +1,9 @@
- const agregar = document.getElementById("agregar");// obtiene el elemento del DOM con el id "agregar"
+const agregar = document.getElementById("agregar");// obtiene el elemento del DOM con el id "agregar"
 const dinamic = document.getElementById("dinamic");
 let size =0;
 let contador = 0; 
+
+
     // Función para agregar un nuevo input al div dinamic
     agregar.addEventListener('click',e =>{
         let input = document.createElement("input"); // crea un nuevo elemento input
@@ -69,6 +71,38 @@ let contador = 0;
         arrar.innerHTML = ""; // Limpiamos el contenido previo
         const imprimirarreglo = document.getElementById("imprimirarreglo");
         imprimirarreglo.innerHTML = ""; // Limpiamos el contenido previo
-        gemerarArreglo(); // Llamamos a la función para generar el arreglo nuevamente
+        generarArreglo(); // Llamamos a la función para generar el arreglo nuevamente
         size = 0; // Reiniciamos el tamaño del arreglo
     }
+
+    // Función para crear una matriz
+    function matriz(){
+        const m = document.getElementById("m").value;
+        const n = document.getElementById("n").value;
+        const spaceofmatriz = document.getElementById("spaceofmatriz");
+        if(m <1 || n<1){
+             let error = document.createElement("p");
+             error.textContent = "ingrese los valores correctos de m y n";
+             spaceofmatriz.innerHTML = ""; // Limpiamos el contenido previo
+             spaceofmatriz.appendChild(error);
+        }else{
+            spaceofmatriz.innerHTML= ""; // limpiamos toda la shit
+            for(i=1; i<=m; i++){
+                let div = document.createElement("div"); // crea un nuevo elemento label
+                for(j=1; j<=n; j++){
+                    let input = document.createElement("input"); // crea un nuevo elemento input
+                    input.type = "number"; 
+                    input.id = "matriz" + i + j; 
+                    input.placeholder = `(${i}, ${j})`; 
+                    div.appendChild(input); 
+                }
+                spaceofmatriz.appendChild(div); // agrega el div al espacio de la matriz
+            }
+        }
+    }
+   const showmatriz = document.getElementById("showmatriz");
+   const auswerfem = document.getElementById("auswerfen");
+
+   showmatriz.addEventListener('click',e =>{
+    
+   });
