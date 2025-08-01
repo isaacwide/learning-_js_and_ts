@@ -1,9 +1,7 @@
-
-
-    const agregar = document.getElementById("agregar");// obtiene el elemento del DOM con el id "agregar"
-    const dinamic = document.getElementById("dinamic");
-    let size =0;
-    let contador = 0; 
+ const agregar = document.getElementById("agregar");// obtiene el elemento del DOM con el id "agregar"
+const dinamic = document.getElementById("dinamic");
+let size =0;
+let contador = 0; 
     // Función para agregar un nuevo input al div dinamic
     agregar.addEventListener('click',e =>{
         let input = document.createElement("input"); // crea un nuevo elemento input
@@ -66,3 +64,11 @@
             });
 });
 
+    function limpiar() {
+        const arrar = document.getElementById("arrar");
+        arrar.innerHTML = ""; // Limpiamos el contenido previo
+        const imprimirarreglo = document.getElementById("imprimirarreglo");
+        imprimirarreglo.innerHTML = ""; // Limpiamos el contenido previo
+        gemerarArreglo(); // Llamamos a la función para generar el arreglo nuevamente
+        size = 0; // Reiniciamos el tamaño del arreglo
+    }
