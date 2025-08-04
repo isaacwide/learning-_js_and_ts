@@ -101,8 +101,24 @@ let contador = 0;
         }
     }
    const showmatriz = document.getElementById("showmatriz");
-   const auswerfem = document.getElementById("auswerfen");
 
    showmatriz.addEventListener('click',e =>{
-    
+    let matriz = [];
+    const m = document.getElementById("m").value;
+    const n = document.getElementById("n").value;
+    const auswerfem = document.getElementById("auswerfen");
+    auswerfem.innerHTML = "";
+
+        for(let i=1; i<=m; i++){
+            aux = []
+            for(let j=1 ; j<=n; j++){
+                let input = document.getElementById("matriz" + i + j);
+                if(input && input.value !== ""){
+                    
+                }
+
+
+            }
+        }
+
    });
