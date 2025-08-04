@@ -80,6 +80,7 @@ let contador = 0;
         const m = document.getElementById("m").value;
         const n = document.getElementById("n").value;
         const spaceofmatriz = document.getElementById("spaceofmatriz");
+
         if(m <1 || n<1){
              let error = document.createElement("p");
              error.textContent = "ingrese los valores correctos de m y n";
@@ -102,23 +103,34 @@ let contador = 0;
     }
    const showmatriz = document.getElementById("showmatriz");
 
-   showmatriz.addEventListener('click',e =>{
-    let matriz = [];
-    const m = document.getElementById("m").value;
-    const n = document.getElementById("n").value;
-    const auswerfem = document.getElementById("auswerfen");
-    auswerfem.innerHTML = "";
+    showmatriz.addEventListener('click',e =>{
+        let matriz = [];
+        const m = document.getElementById("m").value;
+        const n = document.getElementById("n").value;
+        const auswerfem = document.getElementById("auswerfen");
+        auswerfem.innerHTML = "";
 
-        for(let i=1; i<=m; i++){
-            aux = []
-            for(let j=1 ; j<=n; j++){
-                let input = document.getElementById("matriz" + i + j);
-                if(input && input.value !== ""){
+            for(let i=1; i<=m; i++){
+                aux = []
+                for(let j=1 ; j<=n; j++){
+                    let input = document.getElementById("matriz" + i + j);
+                    if(input && input.value !== ""){
+                        aux.push(parseFloat(input.value));
+                    }else{
+                        aux.push(0); // Si el input está vacío, se agrega 0
+                    }
+                }
+                matriz.push(aux); // Agrega la fila al arreglo matriz
+            }
+            for(i=1; i<=m; i++){
+                let div = document.createElement("div"); 
+                for(j=1; j<=n; j++){
+                    let p = document.createElement("p");
+                    p.textContent = matriz[i-1][j-1]; // Accede al valor de la matriz
+                    div.appendChild(p); // Agrega el párrafo al div
                     
                 }
-
-
+                auswerfem.appendChild(div);
             }
-        }
 
    });
