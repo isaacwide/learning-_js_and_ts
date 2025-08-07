@@ -1,32 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interracion entre js y json</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Interacción entre JS y JSON</title>
 </head>
 <body>
-    <form id="formulario">
-        <p>
-            NOMBRE: <input type="checkbox" name="colors" value="blue" id="1" /><br />
-            EDADES: <input type="checkbox" name="colors" value="yellow" id="2"/><br />
-            DIRECCIONES: <input type="checkbox" name="colors" value="red" id="3" /><br />
-            EMAIL: <input type="checkbox" name="colors" value="green" id="4"/>
-        </p>
+  <form id="formulario">
+    <p>
+      NOMBRE: <input type="checkbox" name="data" value="name" id="1" /><br />
+      EDADES: <input type="checkbox" name="data" value="age" id="2" /><br />
+      DIRECCIONES: <input type="checkbox" name="data" value="address" id="3" /><br />
+      PHONE NUMBER: <input type="checkbox" name="data" value="phoneNumbers" id="4" /><br />
+      EMAIL: <input type="checkbox" name="data" value="email" id="5" />
+    </p>
 
-        <button id="mostrar" type="submit"> mostrar nombres </button>
+    <!-- Cambiamos el botón para que NO envíe el formulario -->
+    <button id="mostrar" type="button">mostrar nombres</button>
+  </form>
 
-    </form>
-        
-    <div id="js">
-        <!--aque se mostrara el json-->
-    </div>
-    
+  <div id="js">
+    <!-- Aquí se mostrará el JSON -->
+  </div>
 
-    <script src="trabajo.js"></script>
-
-
-
-    
+  <script src="trabajo.js"></script>
 </body>
 </html>
