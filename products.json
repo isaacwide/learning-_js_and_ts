@@ -1,0 +1,47 @@
+[
+    {
+        "nombre": "The Legend of Zelda: Breath of the Wild",
+        "precio": 59.99,
+        "cantidad": 100,
+        "stock": true,
+        "desarrollador": "Nintendo",
+        "plataforma": ["Nintendo Switch", "Wii U"],
+        "fecha_de_lanzamiento": "2017-03-03"
+    },
+    {
+        "nombre": "God of War Ragnarok",
+        "precio": 69.99,
+        "cantidad": 50,
+        "stock": true,
+        "desarrollador": "Santa Monica Studio",
+        "plataforma": ["PlayStation 4", "PlayStation 5"],
+        "fecha_de_lanzamiento": "2022-11-09"
+    },
+    {
+        "nombre": "Elden Ring",
+        "precio": 59.99,
+        "cantidad": 75,
+        "stock": true,
+        "desarrollador": "FromSoftware",
+        "plataforma": ["PlayStation 4", "PlayStation 5", "Xbox One", "Xbox Series X/S", "PC"],
+        "fecha_de_lanzamiento": "2022-02-25"
+    },
+    {
+        "nombre": "Cyberpunk 2077",
+        "precio": 49.99,
+        "cantidad": 30,
+        "stock": true,
+        "desarrollador": "CD Projekt Red",
+        "plataforma": ["PlayStation 4", "PlayStation 5", "Xbox One", "Xbox Series X/S", "PC"],
+        "fecha_de_lanzamiento": "2020-12-10"
+    },
+    {
+        "nombre": "Minecraft",
+        "precio": 26.95,
+        "cantidad": 200,
+        "stock": true,
+        "desarrollador": "Mojang Studios",
+        "plataforma": ["PC", "PlayStation", "Xbox", "Nintendo Switch", "Mobile"],
+        "fecha_de_lanzamiento": "2011-11-18"
+    }
+]

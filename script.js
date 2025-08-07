@@ -14,3 +14,16 @@ document.getElementById("agregar").addEventListener('click', e =>{
         alert("No se pueden agregar más imágenes");
    }  
 });
+
+
+const input = document.getElementById("miInput");
+input.addEventListener('keydown', function(evenet) {
+     if(event.key==="Enter"){
+        const div = document.getElementById("dinamic");
+        let texto = document.createElement("p");
+        texto.textContent = input.value;
+        div.appendChild(texto);
+        input.value = ""; // Limpiar el input después de agregar el texto
+     }
+
+})
